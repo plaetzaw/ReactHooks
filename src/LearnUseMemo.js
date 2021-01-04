@@ -1,13 +1,27 @@
-import React, {useState} from 'react'
+import React, {useState, useMemo, useEffect} from 'react'
+
+//Caching a value so you don't have to re-compute it every single time
+
+//That said, if you do it too much throughout your application, it can bloat the memory useage and cause performance issues
+//You should only useMemo where you need to, definitely NOT everywhere! Use it where the function that is being called is very slow!
+
+//Referential equality
 
 function LearnUseMemo(){
  const [number, setNumber] = useState(0)
  const [dark, setDark] = useState(false)
- const doubleNumber = slowFunction(number)
- const themeStyles = { 
-     backgroundColor: dark ? 'black' : 'white', 
-     color: dark ? 'white' : 'black'
- }
+ const doubleNumber = useMemo(() => {
+     return slowFunction(number)
+    }, [number])
+ const themeStyles = useMemo(()=>{ 
+     return {
+        backgroundColor: dark ? 'black' : 'white', 
+        color: dark ? 'white' : 'black'
+     }
+ }, [dark])
+ useEffect(()=>{
+    console.log("theme changed")
+ }, [])
 
 
   return (
