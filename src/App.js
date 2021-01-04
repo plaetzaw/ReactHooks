@@ -10,7 +10,6 @@ function App() {
   // const [count, setCount] = useState(4)
   // const [count, setCount] = useState(firstCount())
   // const [count, setCount] = useState({ count: 4, theme: "green"})
-
   const [count, setCount] = useState(4)
   const [theme, setTheme] = useState("blue")
 
@@ -19,7 +18,6 @@ function App() {
     setCount(prevCount => prevCount - 1)
     setTheme("orange")
   }
-
     // setState(prevCount => {
       //setState will COMPLETELY override your previous state, so if you're using an object, all of the values will be overriden
       //by spreading the state, you can determine what properites you want to update!
