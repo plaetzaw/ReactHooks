@@ -16,7 +16,7 @@ const [value, setValue] = useState(() => {
 
 useEffect(() => {
     localStorage.setItem(key, JSON.stringify(value))
-}, [value])
+}, [key, value])
 
 return [value, setValue]
 }

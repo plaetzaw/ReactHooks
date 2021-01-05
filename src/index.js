@@ -10,6 +10,7 @@ import useReducer from './LearnUseReducer'
 import useReducer2 from './LearnUseReducer2'
 import useContext from './LearnUseContext'
 import customHooks from './CustomHooks'
+import useCallback from './LearnUseCallback'
 
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
@@ -26,6 +27,7 @@ ReactDOM.render(
     <Route exact path="/ured2" component={useReducer2}/>
     <Route exact path="/uc" component={useContext}/>
     <Route exact path="/ch" component={customHooks}/>
+    <Route exact path="/ucb" component={useCallback}/>
 
 
   </Switch>
