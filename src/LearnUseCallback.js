@@ -1,13 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useCallback} from 'react'
 import List from './List'
 
 function LearnUseCallback() {
     const [number, setNumber] = useState(1)
     const [dark, setDark] = useState(false)
 
-    const getItems = () => {
-        return [number, number * number, number % 4]
-    }
+
+    //useMemo vs useCallback
+    //useMemo takes a function and returns the return value of the function
+    //useCallback take a fucntion and returns the entire function
+    //often used with referential equality
+    
+    const getItems = useCallback((incrementor) => {
+        return [number, (number + 1 * incrementor), (number + 4 * incrementor)]
+    }, [number])
 
     const theme = {
         backgroundColor: dark ? '#333' : '#FFF',
