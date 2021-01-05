@@ -8,6 +8,7 @@ import useRef from './LearnUseRef'
 import useMemo from './LearnUseMemo'
 import useReducer from './LearnUseReducer'
 import useReducer2 from './LearnUseReducer2'
+import useContext from './LearnUseContext'
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
@@ -21,6 +22,7 @@ ReactDOM.render(
     <Route exact path="/um" component={useMemo}/>
     <Route exact path="/ured" component={useReducer}/>
     <Route exact path="/ured2" component={useReducer2}/>
+    <Route exact path="/uc" component={useContext}/>
 
 
   </Switch>
