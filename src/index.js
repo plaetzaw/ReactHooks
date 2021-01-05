@@ -6,6 +6,9 @@ import useEffect from './useEffect'
 import useEffect2 from './LearnUE2'
 import useRef from './LearnUseRef'
 import useMemo from './LearnUseMemo'
+import useReducer from './LearnUseReducer'
+import useReducer2 from './LearnUseReducer2'
+
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 ReactDOM.render(
@@ -14,8 +17,11 @@ ReactDOM.render(
     <Route exact path="/" component={App}/>
     <Route exact path="/ue" component={useEffect}/>
     <Route exact path="/ue2" component={useEffect2}/>
-    <Route exact path ="/ur" component={useRef}/>
-    <Route exact path ="/um" component={useMemo}/>
+    <Route exact path="/ur" component={useRef}/>
+    <Route exact path="/um" component={useMemo}/>
+    <Route exact path="/ured" component={useReducer}/>
+    <Route exact path="/ured2" component={useReducer2}/>
+
 
   </Switch>
   </BrowserRouter>,
