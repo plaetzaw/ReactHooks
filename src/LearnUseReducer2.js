@@ -5,8 +5,10 @@ import Todo from './todo'
 export const ACTIONS = {
    ADD_TODO: "add-todo",
    TOGGLE_TODO: "toggle-todo",
-   DELETE_TODO: "delete-todo"
+   DELETE_TODO: "delete-todo",
+   EDIT_TODO: "edit-todo",
 }
+
 
 //Similar to Reducers in Redux
 function reducer(todos, action){
@@ -22,14 +24,18 @@ function reducer(todos, action){
             })
         case ACTIONS.DELETE_TODO: 
             return todos.filter(todo => todo.id !== action.payload.id)
+        case ACTIONS.EDIT_TODO:
+            return todos
         default:
             return todos
     }
 }
 
+
 function newTodo(name){
-    return { id: Date.now(), name: name, complete: false}
+    return { id: Math.random(), name: name, complete: false}
 }
+
 
 export default function LearnUseReducer(){
     const [todos, dispatch] = useReducer(reducer, [])
@@ -41,7 +47,11 @@ function handleSubmit(e){
     setName("")
 }
 
+
+
+
 console.log(todos)
+
 
 
     return (
