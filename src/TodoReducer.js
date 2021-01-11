@@ -37,11 +37,12 @@ export const initialState = {
         }
       case "remove":
         {
+          const updateCounter = state.counter - 1
           const idx = state.todos.findIndex(t => t.id === action.id);
           const todos = Object.assign([], state.todos);
           todos.splice(idx, 1);
           return {
-            counter: state.counter,
+            counter: updateCounter,
             todos: todos,
           };
         }

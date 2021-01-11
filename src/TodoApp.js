@@ -7,6 +7,7 @@ import "./TodoStyles.css"
 const TodoApp = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   return (<>
+  <h1>There are currently {state.counter} items remaining</h1>
     <AddTodo
       add={text => dispatch({type: "add", text: text})}
     />
