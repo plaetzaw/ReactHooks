@@ -11,6 +11,7 @@ import useReducer2 from './LearnUseReducer2'
 import useContext from './LearnUseContext'
 import customHooks from './CustomHooks'
 import useCallback from './LearnUseCallback'
+import timesList from './timesList'
 
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
@@ -28,6 +29,7 @@ ReactDOM.render(
     <Route exact path="/uc" component={useContext}/>
     <Route exact path="/ch" component={customHooks}/>
     <Route exact path="/ucb" component={useCallback}/>
+    <Route exact path="/times" component={timesList}/>
 
 
   </Switch>

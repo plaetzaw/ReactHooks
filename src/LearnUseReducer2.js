@@ -7,10 +7,15 @@ export const ACTIONS = {
    TOGGLE_TODO: "toggle-todo",
    DELETE_TODO: "delete-todo",
    EDIT_TODO: "edit-todo",
+   INCREASE: "increase",
 }
 
 
-//Similar to Reducers in Redux
+export default function LearnUseReducer(){
+    const [todos, dispatch] = useReducer(reducer, [])
+    const [name, setName] = useState("")
+
+    //Similar to Reducers in Redux
 function reducer(todos, action){
     switch (action.type){
         case ACTIONS.ADD_TODO:
@@ -37,9 +42,6 @@ function newTodo(name){
 }
 
 
-export default function LearnUseReducer(){
-    const [todos, dispatch] = useReducer(reducer, [])
-    const [name, setName] = useState("")
 
 function handleSubmit(e){
     e.preventDefault()
