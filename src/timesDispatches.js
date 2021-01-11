@@ -1,7 +1,7 @@
 export const ACTIONS = {
-    ADD = "Add",
-    EDIT = "Edit",
-    DELETE = "Delete",
+    ADD: "Add",
+    EDIT: "Edit",
+    DELETE: "Delete",
 }
 
 export const initialState = {
@@ -61,3 +61,5 @@ export const reducer = (state, action) => {
 
     }
 }
+
+export default reducer
