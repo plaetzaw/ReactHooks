@@ -2,10 +2,13 @@ export const initialState = {
     counter: 2,
     todos: [{
       id: 1,
-      text: "One",
+      text: "50 Free",
+      time: 21.05,
     }, {
       id: 2,
-      text: "Two",
+      text: "50 Fly",
+      time: 22.89,
+
     }],
   };
   
@@ -17,6 +20,7 @@ export const initialState = {
           const newTodo = {
             id: newCounter,
             text: action.text,
+            time: action.time
           };
           return {
             counter: newCounter,
